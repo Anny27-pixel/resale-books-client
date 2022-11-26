@@ -46,7 +46,7 @@ const UserContext = ({ children }) => {
         return () => {
             unSubscribe();
         };
-    }, []);
+    }, [auth]);
 
     const authInfo = {
         user,
