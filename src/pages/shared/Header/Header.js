@@ -24,7 +24,7 @@ const Header = () => {
         <div id="navbar" className="fixed-top">
             {user && user.uid ? (
                 <p className="bg-dark py-1 text-light m-0 text-center">
-                    🎉 Welcome,
+                    Welcome,
                     {user.displayName ? user.displayName : user.email}
                 </p>
             ) : (
