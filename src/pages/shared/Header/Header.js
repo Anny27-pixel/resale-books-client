@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import logo from '../../../assets/header.png';
 
 import { Button } from "react-bootstrap";
 import { AuthContext } from "../../../Context/UserContext";
@@ -19,8 +20,6 @@ const Header = () => {
             });
     };
     const expand = "md";
-    const logo =
-        "https://cdn0.iconfinder.com/data/icons/library-9/64/Search-book-find-education-school-library-magnifier-256.png";
     return (
         <div id="navbar" className="fixed-top">
             {user && user.uid ? (
