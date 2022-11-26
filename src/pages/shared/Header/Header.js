@@ -33,7 +33,7 @@ const Header = () => {
             <Navbar
                 key={expand}
                 expand={expand}
-                className="mb-3 align-items-center  bg-nav"
+                className="mb-3 align-items-center  bg-nav "
             >
                 <Container>
                     <Navbar.Brand>
