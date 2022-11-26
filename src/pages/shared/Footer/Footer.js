@@ -8,10 +8,10 @@ const Footer = () => {
             <footer className="py-2 bg-dark text-light text-center">
                 <Link
                     to="/home"
-                    className="d-flex gap-2 justify-content-center align-items-center"
+                    className="d-flex gap-2 justify-content-center align-items-center text-decoration-none"
                 >
                     <img src={logo} alt="" width="60px" />
-                    <h2>Resale books</h2>
+                    <h2 >Resale books</h2>
                 </Link>
                 <hr />
                 <p>Jabin Tasmin Anny ||<small> Copy right coming soon !!!</small></p>

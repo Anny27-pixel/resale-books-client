@@ -37,7 +37,7 @@ const Header = () => {
             >
                 <Container>
                     <Navbar.Brand>
-                        <Link to="/home" className="d-flex gap-2 align-items-center">
+                        <Link to="/home" className="d-flex gap-2 align-items-center text-decoration-none">
                             <img src={logo} alt="" width="60px" />
                             <h2>Resale Books</h2>
                         </Link>
@@ -55,18 +55,18 @@ const Header = () => {
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                             <Nav className="justify-content-end flex-grow-1 pe-3 gap-3 align-items-center">
-                                <Link to="/home">Home</Link>
-                                <Link to="/Catagories">Catagories</Link>
-                                <Link to="/addProduct">Add a Product</Link>
-                                <Link to="/blog">Blogs</Link>
+                                <Link to="/home" className="text-decoration-none">Home</Link>
+                                <Link to="/Catagories" className="text-decoration-none">Catagories</Link>
+                                <Link to="/addProduct" className="text-decoration-none">AddProduct</Link>
+                                <Link to="/blog" className="text-decoration-none">Blogs</Link>
                                 {user && user.uid ? (
-                                    <Button variant="primary" onClick={handleLogOut}>
+                                    <Button variant="primary" onClick={handleLogOut} className="text-decoration-none">
                                         Logout
                                     </Button>
                                 ) : (
                                     <>
-                                        <Link to="/signUp">Sign Up</Link>
-                                        <Link to="/login">Login</Link>
+                                        <Link to="/signUp" className="text-decoration-none">Sign Up</Link>
+                                        <Link to="/login" className="text-decoration-none">Login</Link>
                                     </>
                                 )}
                             </Nav>
