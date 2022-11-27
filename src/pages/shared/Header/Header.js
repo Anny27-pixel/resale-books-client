@@ -21,7 +21,7 @@ const Header = () => {
     };
     const expand = "md";
     return (
-        <div id="navbar" className="fixed-top">
+        <div id="navbar" className="fixed-top bg-dark">
 
             <Navbar
                 key={expand}
@@ -54,7 +54,7 @@ const Header = () => {
                                 <Link to="/addProduct" className="text-decoration-none">AddProduct</Link>
                                 <Link to="/blog" className="text-decoration-none">Blogs</Link>
                                 {user && user.uid ? (
-                                    <p className="text-dark py-1 text-light m-0 text-center">
+                                    <p className=" py-1 text-primary m-0 text-center">
                                         {user.displayName ? user.displayName : user.email}
                                     </p>
                                 ) : (
