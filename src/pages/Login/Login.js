@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/UserContext";
 import logo from '../../assets/google.png';
+import toast from "react-hot-toast";
 
 
 const Login = () => {
@@ -18,11 +19,13 @@ const Login = () => {
             .then((res) => {
                 const user = res.user;
                 setUser(user);
+                toast.success("sign in Successful");
                 navigate("/home");
             })
             .catch((error) => {
-                alert("Cant sign in");
+
                 console.error(error);
+                toast.error("Sign-in Failed");
             });
     };
 
@@ -35,7 +38,7 @@ const Login = () => {
             .then((res) => {
                 const user = res.user;
                 setUser(user);
-                alert("sign in Successful");
+                toast.success("sign in Successful");
                 console.log(user);
                 form.reset();
                 navigate("/home");
@@ -43,13 +46,13 @@ const Login = () => {
             .catch((error) => {
                 console.error(error);
                 setError(error.code);
-                alert("Sign-in Failed");
+                toast.error("Sign-in Failed");
             });
     };
     return (
         <div>
             <div className="container mt-5 pt-5">
-                <h1 className="d-flex justify-content-center fw-bold text-primary">Login</h1>
+                <h1 className="d-flex justify-content-center fw-bold text-primary mt-5 ">Login</h1>
                 <div
                     className="form-container mx-auto border border-1 p-3 my-5"
                     style={{ maxWidth: "420px" }}
@@ -88,7 +91,7 @@ const Login = () => {
                     <div className="d-flex justify-content-between">
                         <button
                             onClick={handleGoogleSignIn}
-                            className="btn btn-outline-warning text-dark "
+                            className="btn btn-outline-warning text-dark w-100 "
                         >
                             Sign-in with
                             <img

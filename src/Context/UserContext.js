@@ -9,6 +9,7 @@ import {
     signInWithEmailAndPassword,
     onAuthStateChanged,
     signOut,
+    updateProfile,
 } from "firebase/auth";
 import { useEffect } from "react";
 
@@ -33,6 +34,10 @@ const UserContext = ({ children }) => {
         return signInWithPopup(auth, googleProvider);
     };
 
+    const updateUser = (userInfo) => {
+        return updateProfile(auth.currentUser, userInfo);
+    };
+
     const logOut = () => {
         return signOut(auth);
     };
@@ -54,6 +59,7 @@ const UserContext = ({ children }) => {
         createUser,
         signIn,
         setUser,
+        updateUser,
         logOut,
         googleSignIn,
     };
