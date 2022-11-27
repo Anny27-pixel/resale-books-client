@@ -35,11 +35,12 @@ const Header = () => {
                             <h2>Resale Books</h2>
                         </Link>
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+                    <Navbar.Toggle className="bg-primary" aria-controls={`offcanvasNavbar-expand-${expand}`} />
                     <Navbar.Offcanvas
                         id={`offcanvasNavbar-expand-${expand}`}
                         aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                         placement="end"
+
                     >
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
