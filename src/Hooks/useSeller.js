@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react';
 
-const useAdmin = (email) => {
+const useSeller = (email) => {
     const [isAdmin, setIsAdmin] = useState(false);
     const [isAdminLoading, setIsAdminLoading] = useState(true);
-
-
 
     useEffect(() => {
         if (email) {
@@ -20,7 +18,8 @@ const useAdmin = (email) => {
                 });
         }
     }, [email]);
+
     return [isAdmin, isAdminLoading];
 };
 
-export default useAdmin;
+export default useSeller;
