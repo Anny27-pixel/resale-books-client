@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Algorithm",
+        "condition": "Good",
+        "buyValue": "380",
+        "sellValue": "250",
+        "contact": "0114768",
+        "purchaseYear": "2020",
+        "category": "1",
+        "image": "https://i.ibb.co/ZHfPsVL/download-2.jpg",
+        "sellerId": "whalghoipyoie361537",
+        "sellerName": "Ayusman",
+        "sellerEmail": "ayusman@gmail.com",
+        "postedTime": "Nov 28, 2022, 7:33:50 PM",
+        "location": "Dhaka",
+        "status": "none"
+    },
+    {
+        "name": "Preceptors",
+        "condition": "Good",
+        "buyValue": "580",
+        "sellValue": "350",
+        "contact": "0114768",
+        "purchaseYear": "2020",
+        "category": "2",
+        "image": "https://i.ibb.co/ZHfPsVL/download-2.jpg",
+        "sellerId": "whalghoipyoie3615dde7",
+        "sellerName": "Ayusman",
+        "sellerEmail": "ayusman@gmail.com",
+        "postedTime": "Nov 28, 2022, 7:33:50 PM",
+        "location": "Dhaka",
+        "status": "none"
+    },
+    {
+        "name": "Opekkha",
+        "condition": "Good",
+        "buyValue": "200",
+        "sellValue": "150",
+        "contact": "0114768",
+        "purchaseYear": "2020",
+        "category": "3",
+        "image": "https://i.ibb.co/ZHfPsVL/download-2.jpg",
+        "sellerId": "whalghoipyoie36153dd7",
+        "sellerName": "Anju",
+        "sellerEmail": "anju@gmail.com",
+        "postedTime": "Nov 28, 2022, 7:33:50 PM",
+        "location": "Dhaka",
+        "status": "none"
+    }
+]

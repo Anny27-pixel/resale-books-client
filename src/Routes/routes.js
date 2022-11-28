@@ -9,12 +9,13 @@ import Home from "../pages/Home/Home";
 
 import Login from "../pages/Login/Login";
 import NotFound from "../pages/NotFound/NotFound";
-import Product from "../pages/ProductCategory/Product";
+
 import SignUp from "../pages/SignUp/SignUp";
 import PrivateRoutes from "./PrivateRoutes";
 import SellerProducts from "../pages/SellerProducts/SellerProducts";
 import Booking from "../pages/Booking/Booking";
 import AddProduct from "../pages/AddProduct/AddProduct";
+import ProductCategory from "../pages/ProductCategory/ProductCategory";
 
 
 const router = createBrowserRouter([
@@ -56,7 +57,7 @@ const router = createBrowserRouter([
                     fetch(
                         `http://localhost:5000/categories/${params.cid}`
                     ),
-                element: <PrivateRoutes><Product></Product></PrivateRoutes>
+                element: <PrivateRoutes><ProductCategory></ProductCategory></PrivateRoutes>
             },
             {
                 path: '*',
