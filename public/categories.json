@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "name": "Academic",
+        "description": "All the academic books",
+        "location": "Rajshahi"
+    },
+    {
+        "id": "2",
+        "name": "Job Preparation",
+        "description": "All the Job Preparation books",
+        "location": "Rajshahi"
+    },
+    {
+        "id": "3",
+        "name": "Novel",
+        "description": "All the Novel books",
+        "location": "Rajshahi"
+    }
+]

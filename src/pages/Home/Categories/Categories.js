@@ -1,59 +1,25 @@
-import React from 'react';
-import { Button, Card } from "react-bootstrap";
+import React, { useEffect, useState } from 'react';
+import Category from './Category';
 const Categories = () => {
+    const [categories, setCategories] = useState([]);
+    useEffect(() => {
+        fetch("http://localhost:5000/categories")
+            .then((res) => res.json())
+            .then((cat) => setCategories(cat))
+            .catch((err) => console.log(err));
+    }, []);
     return (
         <section className="py-5">
-            <h1 className="d-flex justify-content-center fw-bold text-primary">Choose Books By Category</h1>
-            <div className="item-container container my-5">
-                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-                    <div className="col">
-                        <Card>
-                            <Card.Img
-                                variant="top"
-                                src="https://media.gq.com/photos/5ad64204c8be07604e8b5f2f/3:2/w_1998,h_1332,c_limit/21-books-GQ-April-2018-041718-3x2.jpg"
-                            />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.
-                                </Card.Text>
-                                <Button variant="primary">See Details</Button>
-                            </Card.Body>
-                        </Card>
-                    </div>
-                    <div className="col">
-                        <Card>
-                            <Card.Img
-                                variant="top"
-                                src="https://media.gq.com/photos/5ad64204c8be07604e8b5f2f/3:2/w_1998,h_1332,c_limit/21-books-GQ-April-2018-041718-3x2.jpg"
-                            />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.
-                                </Card.Text>
-                                <Button variant="primary">See Details</Button>
-                            </Card.Body>
-                        </Card>
-                    </div>
-                    <div className="col">
-                        <Card>
-                            <Card.Img
-                                variant="top"
-                                src="https://media.gq.com/photos/5ad64204c8be07604e8b5f2f/3:2/w_1998,h_1332,c_limit/21-books-GQ-April-2018-041718-3x2.jpg"
-                            />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.
-                                </Card.Text>
-                                <Button variant="primary">See Details</Button>
-                            </Card.Body>
-                        </Card>
-                    </div>
+            <h1 className="d-flex justify-content-center fw-bold text-primary mt-5 ">Choose your Books By Category</h1>
+
+            <div className="container category-container my-5">
+                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+                    {categories.map((category) => (
+                        <Category
+                            key={category._id}
+                            category={category}
+                        ></Category>
+                    ))}
                 </div>
             </div>
         </section>

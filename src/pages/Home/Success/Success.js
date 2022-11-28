@@ -20,18 +20,6 @@ const Success = () => {
                     <div className='border border-success py-2 px-5 rounded'>
                         <h1 className='my-4'>
                             <CountUp
-                                end={850}
-                                duration={7}
-                                delay={1}
-                                enableScrollSpy={true}
-                            ></CountUp>
-                        </h1>
-                        <h4>Books</h4>
-                    </div>
-
-                    <div className='border border-success py-2 px-5 rounded'>
-                        <h1 className='my-4'>
-                            <CountUp
                                 end={1500}
                                 duration={12}
                                 delay={1}
@@ -39,6 +27,17 @@ const Success = () => {
                             ></CountUp>
                         </h1>
                         <h4>Buyer</h4>
+                    </div>
+                    <div className='border border-success py-2 px-5 rounded'>
+                        <h1 className='my-4'>
+                            <CountUp
+                                end={850}
+                                duration={7}
+                                delay={1}
+                                enableScrollSpy={true}
+                            ></CountUp>
+                        </h1>
+                        <h4>Books</h4>
                     </div>
                     <div className='border border-success py-2 px-5 rounded'>
                         <h1 className='my-4'>

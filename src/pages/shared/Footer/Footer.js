@@ -14,7 +14,7 @@ const Footer = () => {
                     <h2 >Resale books</h2>
                 </Link>
                 <hr />
-                <p>Jabin Tasmin Anny ||<small> Copy right coming soon !!!</small></p>
+                <p className='text-primary'>Jabin Tasmin Anny ||<small> Copy right coming soon !!!</small></p>
             </footer>
         </div>
     );
