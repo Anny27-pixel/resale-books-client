@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import AddProduct from '../AddProduct/AddProduct';
 import CardOfProduct from './CardOfProduct';
 
 const SellerProducts = () => {
@@ -37,6 +38,7 @@ const SellerProducts = () => {
                 )}
                 {products.map((product) => (
                     <CardOfProduct key={product._id} product={product}></CardOfProduct>
+
                 ))}
             </div>
         </div>
