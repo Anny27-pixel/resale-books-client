@@ -51,8 +51,9 @@ const Header = () => {
                         <Offcanvas.Body>
                             <Nav className="justify-content-end flex-grow-1 pe-3 gap-3 align-items-center">
                                 <Link to="/home" className="text-decoration-none">Home</Link>
-                                <Link to="/Catagories" className="text-decoration-none">Catagories</Link>
-                                <Link to="dashboard/addProduct" className="text-decoration-none">AddProduct</Link>
+                                <Link to="/categories" className="text-decoration-none">Catagories</Link>
+                                <Link to="/dashboard" className="text-decoration-none">Dashboard</Link>
+
                                 <Link to="/blog" className="text-decoration-none">Blogs</Link>
                                 {user && user.uid ? (
                                     <p className=" py-1 text-primary m-0 text-center">

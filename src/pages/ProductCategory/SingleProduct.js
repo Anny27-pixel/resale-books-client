@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from "react-bootstrap";
 import { GoVerified } from "react-icons/go";
+import BookingModal from './BookingModal';
 const SingleProduct = ({ product }) => {
     const [show, setShow] = useState(false);
 
@@ -51,7 +52,10 @@ const SingleProduct = ({ product }) => {
                             <GoVerified className="text-primary"></GoVerified>
                         </p>
                     </div>
-
+                    <p className="mt-3 text-center">Purchased year: {purchaseYear} </p>
+                    <div className=" my-3 text-center">
+                        <small>posted time {postedTime}</small>
+                    </div>
                     <Button
                         variant="primary"
                         className="d-block w-100"
@@ -59,13 +63,16 @@ const SingleProduct = ({ product }) => {
                     >
                         Book Now
                     </Button>
-                    <p className="mt-3 text-center">Book Purchased at {purchaseYear} </p>
-                    <div className="card-footer mt-3 text-center">
-                        <small>posted time {postedTime}</small>
-                    </div>
+
                 </div>
             </div>
 
+            <BookingModal
+                handleClose={handleClose}
+                handleShow={handleShow}
+                bookingInfo={bookingInfo}
+                show={show}
+            ></BookingModal>
         </div>
     );
 };

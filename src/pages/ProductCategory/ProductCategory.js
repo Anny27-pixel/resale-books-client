@@ -4,12 +4,13 @@ import SingleProduct from './SingleProduct';
 
 const ProductCategory = () => {
     const { categoryProducts } = useLoaderData();
-    const { name, description } = categoryProducts;
+    const { categoryName, description } = categoryProducts;
+    console.log(categoryName);
 
     return (
         <div className="pt-5 mt-5">
             <div className="title py-5">
-                <h1 className="d-flex justify-content-center fw-bold text-primary mt-5 ">{name} Books</h1>
+                <h1 className="d-flex justify-content-center fw-bold text-primary mt-5 ">All Books of this Category {categoryName}</h1>
                 <p className="text-center">{description}</p>
             </div>
             <div className="container py-4">
