@@ -12,16 +12,16 @@ const Category = ({ category }) => {
                     src={img1}
                     alt="Card image"
                 />
-                <Card.ImgOverlay>
-                    <Card.Title className="fs-4 fw-bold mt-5 py-3 bg-dark text-light text-uppercase">{name}</Card.Title>
+                <Card.Body>
+                    <Card.Title className="fs-4 fw-bold mt-2 py-2 bg-dark text-light text-uppercase">{name}</Card.Title>
                     <Button
-                        variant="dark"
-                        className="mt-4"
+                        variant="light"
+                        className="mt-2"
                         onClick={() => navigate(`/categories/${id}`)}
                     >
                         Show all Books
                     </Button>
-                </Card.ImgOverlay>
+                </Card.Body>
             </Card>
         </div>
     );

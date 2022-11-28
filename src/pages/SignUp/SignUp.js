@@ -16,9 +16,7 @@ const SignUp = () => {
     const navigate = useNavigate();
 
     const addUserToDB = (user) => {
-        // http://localhost:5000/addUser
-        // https://resale-books-server.vercel.app/user
-        fetch("https://resale-books-server.vercel.app/addUser", {
+        fetch("http://localhost:5000/addUser", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
