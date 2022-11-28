@@ -44,7 +44,7 @@ const AddProduct = () => {
                 console.log(data);
                 toast.success("New Service Added");
                 form.reset();
-                navigate("/my-products");
+                navigate("/myProducts");
             })
             .catch((err) => {
                 console.error(err);
