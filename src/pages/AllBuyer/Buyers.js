@@ -10,15 +10,10 @@ const Buyers = () => {
             <div className="title">
                 <h1 className="d-flex justify-content-center fw-bold text-primary mt-5 ">All Buyers</h1>
                 <p className="text-center text-primary ">
-                    <span className="text-danger">{buyers.length}</span> Active buyers
-                    Found
+                    <span className="text-warning">{buyers.length}</span> Active buyers
                 </p>
             </div>
             <div className="container">
-                <div className="row ">
-                    <div className="col text-center border py-3">buyer Information</div>
-                </div>
-
                 {buyers.map((buyer) => (
                     <BuyerCard key={buyer.uid} buyer={buyer}></BuyerCard>
                 ))}

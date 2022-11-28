@@ -8,11 +8,11 @@ const BuyerCard = ({ buyer }) => {
                 <div className="card p-3">
                     <p>Name : {name}</p>
                     <p>Email : {email}</p>
-                    <p>Contact : {contact ? contact : "Not Given Yet"}</p>
+                    <p>Contact : {contact ? contact : "NAN"}</p>
                 </div>
             </div>
             <div className="col-md-2 text-center  py-3 d-flex flex-wrap gap-2">
-                <Button variant="danger">Delete buyer</Button>
+                <Button className='bg-primary'>Delete</Button>
             </div>
         </div>
     );
