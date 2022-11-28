@@ -6,7 +6,7 @@ import AllSeller from "../pages/AllSeller/AllSeller";
 import Blog from "../pages/Blog/Blog";
 import Categories from "../pages/Home/Categories/Categories";
 import Home from "../pages/Home/Home";
-import AddProduct from "../pages/AddProduct"
+
 import Login from "../pages/Login/Login";
 import NotFound from "../pages/NotFound/NotFound";
 import Product from "../pages/ProductCategory/Product";
@@ -14,6 +14,7 @@ import SignUp from "../pages/SignUp/SignUp";
 import PrivateRoutes from "./PrivateRoutes";
 import SellerProducts from "../pages/SellerProducts/SellerProducts";
 import Booking from "../pages/Booking/Booking";
+import AddProduct from "../pages/AddProduct/AddProduct";
 
 
 const router = createBrowserRouter([
