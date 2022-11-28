@@ -26,7 +26,7 @@ const BookingModal = ({ bookingInfo, handleClose, handleShow, show }) => {
             ...bookingInfo,
         };
 
-        fetch("http://localhost:5000/makeOrder", {
+        fetch("https://resale-books-server-anny27-pixel.vercel.app/makeOrder", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

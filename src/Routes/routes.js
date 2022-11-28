@@ -55,7 +55,7 @@ const router = createBrowserRouter([
                 path: "categories/:cid",
                 loader: async ({ params }) =>
                     fetch(
-                        `http://localhost:5000/categories/${params.cid}`
+                        `https://resale-books-server-anny27-pixel.vercel.app/categories/${params.cid}`
                     ),
                 element: <PrivateRoutes><ProductCategory></ProductCategory></PrivateRoutes>
             },
@@ -72,13 +72,13 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/allSeller',
                 loader: async () =>
-                    fetch("http://localhost:5000/allseller"),
+                    fetch("https://resale-books-server-anny27-pixel.vercel.app/allseller"),
                 element: <AllSeller></AllSeller>
             },
             {
                 path: '/dashboard/allBuyer',
                 loader: async () =>
-                    fetch("http://localhost:5000/allBuyer"),
+                    fetch("https://resale-books-server-anny27-pixel.vercel.app/allBuyer"),
                 element: <Buyers></Buyers>
             },
             {
@@ -89,7 +89,7 @@ const router = createBrowserRouter([
                 path: "/dashboard/myProducts/:email",
                 loader: async ({ params }) =>
                     fetch(
-                        `http://localhost:5000/sellerProducts/${params.email}`
+                        `https://resale-books-server-anny27-pixel.vercel.app/sellerProducts/${params.email}`
                     ),
                 element: <SellerProducts></SellerProducts>
             },
@@ -97,7 +97,7 @@ const router = createBrowserRouter([
                 path: "/dashboard/myBookings/:email",
                 loader: async ({ params }) =>
                     fetch(
-                        `http://localhost:5000/myBookings/${params.email}`
+                        `https://resale-books-server-anny27-pixel.vercel.app/myBookings/${params.email}`
                     ),
                 element: <Booking></Booking>
             }

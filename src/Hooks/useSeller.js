@@ -6,7 +6,7 @@ const useSeller = (email) => {
 
     useEffect(() => {
         if (email) {
-            fetch(`http://localhost:5000/user/${email}`)
+            fetch(`https://resale-books-server-anny27-pixel.vercel.app//${email}`)
                 .then((res) => res.json())
                 .then((user) => {
                     console.log(user);
