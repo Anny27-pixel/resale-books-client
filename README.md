@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+### website name : Resale Books
+### Website Link : https://resale-books-524c9.web.app
+### Description:
+# 1. 3 categories of books 
+# 2. category based products
+# 3. user can sign up as a buyer or a seller
+# 4. seller can advertise there products
+# 5. buyer can booking products
