@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "react-bootstrap";
-const Sellercard = ({ seller }) => {
+const Sellercard = ({ seller, deleteHandler }) => {
     const { name, contact, email } = seller;
     return (
         <div className="row border align-items-center">
@@ -12,7 +12,9 @@ const Sellercard = ({ seller }) => {
                 </div>
             </div>
             <div className="col-md-2 text-center  py-3 d-flex flex-wrap gap-2">
-                <Button className='bg-primary'>Delete</Button>
+                <Button className='primary' onClick={() => deleteHandler(email)}>
+                    Delete
+                </Button>
                 <Button variant="primary">Verify Seller</Button>
             </div>
         </div>

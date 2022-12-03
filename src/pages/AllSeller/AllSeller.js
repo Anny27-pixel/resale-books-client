@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 import { useLoaderData } from 'react-router-dom';
 import Sellercard from './Sellercard';
 
 const AllSeller = () => {
-    const sellers = useLoaderData();
-    console.log(sellers);
+    const data = useLoaderData();
+    const [sellers, setSellers] = useState(data);
+
+    const deleteHandler = (email) => {
+        console.log(email);
+        const sellersRemaining = sellers.filter((seller) => seller.email !== email);
+        setSellers(sellersRemaining);
+
+        fetch(`https://resale-books-server.vercel.app/user/${email}`, {
+            method: "DELETE",
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                toast("User Deleted from Database");
+            })
+            .catch((err) => console.error(err));
+    };
     return (
         <div className="">
             <div className="title">
@@ -15,7 +32,11 @@ const AllSeller = () => {
             </div>
             <div className="container">
                 {sellers.map((seller) => (
-                    <Sellercard key={seller.uid} seller={seller}></Sellercard>
+                    <Sellercard
+                        key={seller.uid}
+                        seller={seller}
+                        deleteHandler={deleteHandler}
+                    ></Sellercard>
                 ))}
 
             </div>
